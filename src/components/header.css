@@ -1,0 +1,259 @@
+/* HEADER */
+
+.gh-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    padding: 14px 0;
+}
+
+.gh-header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+    padding: 0 40px;
+}
+
+.gh-logo img {
+    height: 70px;
+    flex-shrink: 0;
+}
+
+/* DESKTOP NAV */
+
+.gh-desktop-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 1;
+    gap: 10px;
+
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.gh-nav-link {
+    color: white;
+    text-decoration: none;
+
+    font-size: clamp(11px, 0.8vw, 14px);
+    letter-spacing: 0.9px;
+
+    text-transform: uppercase;
+
+    position: relative;
+    flex-shrink: 0;
+    transition: color 0.3s ease;
+}
+
+/* Active state - jo page pe hai wo black */
+.gh-nav-link.active {
+    color: #0a0a0a !important;
+}
+
+.gh-nav-link::after {
+    content: "";
+    position: absolute;
+
+    width: 0;
+    height: 1px;
+
+    bottom: -5px;
+    left: 50%;
+
+    background: #c4b896;
+
+    transform: translateX(-50%);
+    transition: 0.3s;
+}
+
+.gh-nav-link:hover::after,
+.gh-nav-link.active::after {
+    width: 100%;
+}
+
+/* RIGHT */
+
+.gh-header-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    flex-shrink: 0;
+}
+
+.gh-reserve-btn {
+    background: #8bc34a;
+    border: none;
+
+    padding: 9px 18px;
+
+    font-size: 12px;
+    letter-spacing: 0.8px;
+
+    color: white;
+    cursor: pointer;
+}
+
+.gh-reserve-btn:hover {
+    background: #7cb342;
+}
+
+.gh-leaders-club img {
+    height: 32px;
+}
+
+/* MOBILE MENU BUTTON */
+
+.gh-mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.gh-hamburger {
+    display: flex;
+    flex-direction: column;
+
+    width: 25px;
+    height: 20px;
+    position: relative;
+}
+
+.gh-hamburger span {
+    position: absolute;
+    height: 2px;
+    width: 100%;
+
+    background: white;
+    transition: 0.3s;
+}
+
+.gh-hamburger span:nth-child(1) {
+    top: 0;
+}
+
+.gh-hamburger span:nth-child(2) {
+    top: 9px;
+}
+
+.gh-hamburger span:nth-child(3) {
+    top: 18px;
+}
+
+.gh-hamburger.active span:nth-child(1) {
+    top: 9px;
+    transform: rotate(135deg);
+}
+
+.gh-hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.gh-hamburger.active span:nth-child(3) {
+    top: 9px;
+    transform: rotate(-135deg);
+}
+
+/* MOBILE NAV */
+
+.gh-mobile-nav {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+
+    transform: translateY(-120%);
+    transition: 0.3s;
+}
+
+.gh-mobile-nav.active {
+    transform: translateY(0);
+}
+
+.gh-mobile-nav a {
+    color: white;
+    padding: 16px;
+
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    font-size: 14px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.gh-mobile-nav a:hover {
+    color: #c4b896;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Mobile active state */
+.gh-mobile-nav a.active {
+    color: #c4b896 !important;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* RESPONSIVE */
+
+@media (max-width:991px) {
+
+    .gh-desktop-nav {
+        display: none;
+    }
+
+    .gh-mobile-menu-btn {
+        display: block;
+    }
+
+    .gh-header-content {
+        padding: 0 20px;
+    }
+
+    .gh-logo img {
+        height: 35px;
+    }
+
+    .gh-reserve-btn {
+        padding: 8px 14px;
+        font-size: 10px;
+    }
+
+}
+
+@media (max-width:1200px) {
+
+    .gh-desktop-nav {
+        gap: 8px;
+    }
+
+}
+
+@media (max-width:1100px) {
+
+    .gh-desktop-nav {
+        gap: 6px;
+    }
+
+    .gh-nav-link {
+        font-size: 10px;
+    }
+
+}

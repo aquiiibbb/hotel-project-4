@@ -1,0 +1,282 @@
+/* Hero Video Section */
+.poolgym-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.poolgym-video-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.poolgym-hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+    will-change: transform;
+}
+
+/* Video Overlay */
+.poolgym-video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+            rgba(0, 0, 0, 0.6) 0%,
+            rgba(0, 0, 0, 0.3) 50%,
+            rgba(0, 0, 0, 0.5) 100%);
+    z-index: 2;
+}
+
+/* Hero Content */
+.poolgym-hero-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+
+.poolgym-hero-text {
+    text-align: center;
+    color: #fbf0e4;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 40px;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.poolgym-hero-title {
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+    color: #fbf0e4;
+    font-family: 'Georgia', serif;
+    text-transform: none;
+    line-height: 1.1;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+    font-style: italic;
+}
+
+.poolgym-hero-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #fbf0e4;
+    font-weight: 300;
+    letter-spacing: 1.2px;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Common Section Styles */
+.section-subtitle {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    color: #8b7355;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-family: 'Georgia', serif;
+    color: #2c2c2c;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.title-underline {
+    width: 60px;
+    height: 2px;
+    background-color: #8b7355;
+    margin-bottom: 30px;
+}
+
+/* Pool Section */
+.pool-section {
+    padding: 100px 0;
+    background-color: #f5f1eb;
+}
+
+.pool-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.pool-text {
+    padding-right: 40px;
+}
+
+.pool-description {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #5a5a5a;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.pool-hours {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.hours-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #2c2c2c;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.hours-subtitle {
+    font-size: 0.85rem;
+    color: #8b7355;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+.pool-image img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Gym Section */
+.gym-section {
+    padding: 100px 0;
+    background-color: #f5f1eb;
+}
+
+.gym-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.gym-text {
+    padding-left: 40px;
+}
+
+.gym-description {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #5a5a5a;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.gym-availability {
+    font-size: 0.85rem;
+    color: #8b7355;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px solid rgba(139, 115, 85, 0.3);
+    border-bottom: 1px solid rgba(139, 115, 85, 0.3);
+}
+
+.gym-image img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .poolgym-hero-title {
+        font-size: 2.5rem;
+        letter-spacing: 3px;
+    }
+
+    .poolgym-hero-description {
+        font-size: 0.95rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .pool-content,
+    .gym-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .pool-text,
+    .gym-text {
+        padding: 0;
+    }
+
+    .pool-image img,
+    .gym-image img {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .poolgym-hero-text {
+        padding: 0 20px;
+    }
+
+    .poolgym-hero-title {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .pool-content,
+    .gym-content {
+        padding: 0 20px;
+    }
+
+    .pool-image img,
+    .gym-image img {
+        height: 300px;
+    }
+}
