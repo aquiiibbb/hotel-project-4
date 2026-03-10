@@ -1,21 +1,18 @@
 import "./header.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
-import { useNavigate, useLocation, Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Header() {
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const navigate = useNavigate();
   const location = useLocation();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const handleLogoClick = () => {
-    navigate("/");
+  const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
   };
 
@@ -28,82 +25,70 @@ export default function Header() {
 
           {/* LOGO */}
 
-          <div
-            className="gh-logo"
-            onClick={handleLogoClick}
-            style={{ cursor: "pointer" }}
-          >
+          <Link to="/" className="gh-logo" onClick={closeMobileMenu}>
             <img
               src="https://www.thegreenwichhotel.com/wp-content/themes/greenwich/assets/images/ui/logo-gh.svg"
               alt="Greenwich Hotel"
             />
-          </div>
+          </Link>
 
 
-          {/* DESKTOP NAVIGATION */}
+          {/* DESKTOP NAV */}
 
           <nav className="gh-desktop-nav">
 
             <Link
               to="/accommondations"
-              className={`gh-nav-link ${location.pathname === "/accommondations" ? "active" : ""
-                }`}
+              className={`gh-nav-link ${location.pathname === "/accommondations" ? "active" : ""}`}
             >
               ACCOMMODATIONS
             </Link>
 
             <Link
               to="/shibui"
-              className={`gh-nav-link ${location.pathname === "/shibui" ? "active" : ""
-                }`}
+              className={`gh-nav-link ${location.pathname === "/shibui" ? "active" : ""}`}
             >
               SHIBUI SPA
             </Link>
 
             <Link
               to="/dining"
-              className={`gh-nav-link ${location.pathname === "/dining" ? "active" : ""
-                }`}
+              className={`gh-nav-link ${location.pathname === "/dining" ? "active" : ""}`}
             >
               DINING
             </Link>
 
             <Link
               to="/poolgym"
-              className={`gh-nav-link ${location.pathname === "/poolgym" ? "active" : ""
-                }`}
+              className={`gh-nav-link ${location.pathname === "/poolgym" ? "active" : ""}`}
             >
               POOL & GYM
             </Link>
 
             <Link
               to="/drawing"
-              className={`gh-nav-link ${location.pathname === "/drawing" ? "active" : ""
-                }`}
+              className={`gh-nav-link ${location.pathname === "/drawing" ? "active" : ""}`}
             >
               DRAWING ROOM & COURTYARD
             </Link>
 
             <Link
               to="/gallery"
-              className={`gh-nav-link ${location.pathname === "/gallery" ? "active" : ""
-                }`}
+              className={`gh-nav-link ${location.pathname === "/gallery" ? "active" : ""}`}
             >
               GALLERIES
             </Link>
 
             <Link
               to="/neigh"
-              className={`gh-nav-link ${location.pathname === "/neigh" ? "active" : ""
-                }`}
+              className={`gh-nav-link ${location.pathname === "/neigh" ? "active" : ""}`}
             >
               NEIGHBORHOOD
             </Link>
 
             <Link
               to="/press"
-              className={`gh-nav-link ${location.pathname === "/press" ? "active" : ""
-                }`}
+              className={`gh-nav-link ${location.pathname === "/press" ? "active" : ""}`}
             >
               PRESS
             </Link>
@@ -134,10 +119,7 @@ export default function Header() {
               onClick={toggleMobileMenu}
             >
 
-              <span
-                className={`gh-hamburger ${isMobileMenuOpen ? "active" : ""
-                  }`}
-              >
+              <span className={`gh-hamburger ${isMobileMenuOpen ? "active" : ""}`}>
                 <span></span>
                 <span></span>
                 <span></span>
@@ -156,37 +138,21 @@ export default function Header() {
 
       <nav className={`gh-mobile-nav ${isMobileMenuOpen ? "active" : ""}`}>
 
-        <Link to="/accommondations" onClick={toggleMobileMenu}>
-          ACCOMMODATIONS
-        </Link>
+        <Link to="/accommondations" onClick={closeMobileMenu}>ACCOMMODATIONS</Link>
 
-        <Link to="/shibui" onClick={toggleMobileMenu}>
-          SHIBUI SPA
-        </Link>
+        <Link to="/shibui" onClick={closeMobileMenu}>SHIBUI SPA</Link>
 
-        <Link to="/dining" onClick={toggleMobileMenu}>
-          DINING
-        </Link>
+        <Link to="/dining" onClick={closeMobileMenu}>DINING</Link>
 
-        <Link to="/poolgym" onClick={toggleMobileMenu}>
-          POOL & GYM
-        </Link>
+        <Link to="/poolgym" onClick={closeMobileMenu}>POOL & GYM</Link>
 
-        <Link to="/drawing" onClick={toggleMobileMenu}>
-          DRAWING ROOM & COURTYARD
-        </Link>
+        <Link to="/drawing" onClick={closeMobileMenu}>DRAWING ROOM & COURTYARD</Link>
 
-        <Link to="/gallery" onClick={toggleMobileMenu}>
-          GALLERIES
-        </Link>
+        <Link to="/gallery" onClick={closeMobileMenu}>GALLERIES</Link>
 
-        <Link to="/neigh" onClick={toggleMobileMenu}>
-          NEIGHBORHOOD
-        </Link>
+        <Link to="/neigh" onClick={closeMobileMenu}>NEIGHBORHOOD</Link>
 
-        <Link to="/press" onClick={toggleMobileMenu}>
-          PRESS
-        </Link>
+        <Link to="/press" onClick={closeMobileMenu}>PRESS</Link>
 
       </nav>
 
