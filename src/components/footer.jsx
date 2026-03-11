@@ -1,6 +1,7 @@
 import './footer.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState, useEffect } from 'react';
+import image2 from '../Assest/logo.png';
 
 export default function Footer() {
     const [selectedLanguage, setSelectedLanguage] = useState({
@@ -12,6 +13,7 @@ export default function Footer() {
 
     const languages = [
         { code: 'en', name: 'ENGLISH', flag: 'https://flagcdn.com/w20/us.png' },
+        { code: 'hn', name: 'HINDI', flag: 'https://flagcdn.com/w20/in.png' },
         { code: 'es', name: 'ESPAÑOL', flag: 'https://flagcdn.com/w20/es.png' },
         { code: 'fr', name: 'FRANÇAIS', flag: 'https://flagcdn.com/w20/fr.png' },
         { code: 'de', name: 'DEUTSCH', flag: 'https://flagcdn.com/w20/de.png' },
@@ -51,16 +53,16 @@ export default function Footer() {
                         {/* Logo */}
                         <div className="footer-logo">
                             <div className="footer-logo-text">
-                                <img src="https://www.thegreenwichhotel.com/wp-content/themes/greenwich/assets/images/ui/logo-gh.svg" alt="Greenwich Hotel Logo" />
+                                
                             </div>
                         </div>
 
                         {/* Address */}
                         <div className="footer-address">
-                            <div className="address-icon">📍</div>
+                            <div className="address-icon">📍</div><img src={image2} alt="Greenwich Hotel Logo" />
                             <div className="address-text">
-                                <div>377 GREENWICH STREET,</div>
-                                <div>NEW YORK NY 10013</div>
+                                <div>7050 Okeechobee Road,</div>
+                                <div>FL 34945, United States</div>
                             </div>
                         </div>
 

@@ -33,7 +33,7 @@ export default function Dining() {
                     <div className="dining-video-overlay"></div>
 
                     <div className="dining-hero-content">
-                        <h1 className="hero-title">Locanda Verde</h1>
+                        <h1 className="hero-title">Crossroads Inn</h1>
 
                         <p className="hero-desc">
                             A casual neighborhood taverna in TriBeCa serving
@@ -94,7 +94,7 @@ export default function Dining() {
                         </p>
 
                         <span className="ny">
-                            New York
+                            United States
                         </span>
 
                     </div>
@@ -123,7 +123,7 @@ export default function Dining() {
                         <p>
                             FOOD PORN COMES TO MIND WHEN
                             DISHES ARE DELIVERED TO THE
-                            TABLE AT LOCANDA VERDE.
+                            TABLE AT CROSSROADS INN.
                         </p>
 
                         <span className="paper">

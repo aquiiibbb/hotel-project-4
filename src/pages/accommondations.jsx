@@ -9,188 +9,180 @@ export default function Accommodations() {
 
     const tabs = [
         'ALL ACCOMMODATIONS',
-        'ROOMS',
-        'SUITES',
-        'DUPLEXES & PENTHOUSE',
+        'STANDARD ROOMS',
+        'DELUXE ROOMS',
+        'FAMILY SUITES',
         'ADA ACCESSIBLE'
     ];
 
-    // Amenities data
+    // Amenities data - Original version kept
     const amenitiesData = [
-        'High-Speed Wireless internet',
-        'Minibar snacks, water, and soft drinks',
-        'Domestic and International phone calls',
-        'PressReader – digital access to global newspapers and magazines',
-        'Printed newspapers upon request',
-        'Packing and unpacking service upon request',
-        'House car for short trips within downtown NYC on availability',
-        'Nespresso set up',
-        'Tea set up upon request',
-        'Coffee and tea when ordered with wake up call',
-        'Extra twin bed or crib upon request in advance'
+        'Great for your stay',
+        'Bathroom',
+        'Bedroom',
+        'Kitchen',
+        'Living Area',
+        'Media & Technology',
+        'Internet',
+        'Parking',
+        'Services',
+        'Reception Services',
+        'Sefety & Security',
+        'General',
+        'Accessibility',
+        'Languages Spoken'
     ];
 
-    // Sample accommodation data with multiple images
+    // Sample accommodation data with multiple images - Updated for Crossroads Inn
     const accommodationsData = {
         'ALL ACCOMMODATIONS': {
             title: 'All Accommodations',
-            description: 'Discover our complete range of luxury accommodations, each thoughtfully designed to provide an exceptional experience in the heart of Greenwich Village.',
+            description: 'Comfortable accommodations in Fort Pierce with modern amenities, convenient facilities, and easy access to local attractions.',
             rooms: [
                 {
                     id: 1,
-                    name: 'Superior Room',
-                    type: 'Room',
-                    size: '350 sq ft',
+                    name: 'Double Room',
+                    type: '2 double beds',
+                  
                     images: [
-                        'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&h=300&fit=crop',
-                        'https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=500&h=300&fit=crop',
-                        'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=500&h=300&fit=crop'
+                        'https://cf.bstatic.com/xdata/images/hotel/max500/822020183.jpg?k=ab4e178448acb6a3489e44bb9072107db288cf4560e34a54528a516aa16eafa4&o=',
+                     
                     ],
-                    features: ['King Bed', 'City View', 'Marble Bathroom', 'WiFi']
+                    features: ['Queen Bed', 'Free WiFi', 'Private Bathroom', 'Work Desk']
                 },
                 {
                     id: 2,
-                    name: 'Greenwich Suite',
-                    type: 'Suite',
-                    size: '650 sq ft',
+                    name: 'King Room-Disability Access',
+                    type: '1 extra-large double bed',
+                  
                     images: [
-                        'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=500&h=300&fit=crop',
-                        'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=500&h=300&fit=crop',
-                        'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&h=300&fit=crop'
+                        'https://cf.bstatic.com/xdata/images/hotel/max300/822020375.jpg?k=d2f8486cd1de778ee86b312a6b4b418f5db4e8dc64924ae7fd448e00e0ef471b&o=',
+                       
                     ],
-                    features: ['Separate Living Area', 'King Bed', 'Garden View', 'Kitchenette']
+                    features: ['King Bed', 'Refrigerator', 'Microwave', 'Free Parking']
                 },
                 {
                     id: 3,
-                    name: 'Penthouse Suite',
-                    type: 'Penthouse',
-                    size: '1200 sq ft',
+                    name: 'King Room',
+                    type: '1 extra-large diuble bed',
+                    
                     images: [
-                        'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=500&h=300&fit=crop',
-                        'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&h=300&fit=crop',
-                        'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=500&h=300&fit=crop'
+                        'https://cf.bstatic.com/xdata/images/hotel/max300/822020379.jpg?k=ee0f85f331f229439b7adb988ee7f57c6708fa486e1180926be9889e11491516&o=',
+  
                     ],
-                    features: ['Private Terrace', 'Two Bedrooms', 'Full Kitchen', 'City Views']
+                    features: ['Two Queen Bedhttps://www.booking.com/hotel/us/crossroads-inn-fort-pierce.en-gb.html?aid=356980&label=gog235jc-10CAso7AFCGmNyb3Nzcm9hZHMtaW5uLWZvcnQtcGllcmNlSAlYA2hsiAEBmAEzuAEHyAEM2AED6AEB-AEBiAIBqAIBuALm177NBsACAdICJGRiZjliM2Q3LWVkODgtNGMyYy1hZjU3LTUwMDRiYmU3YTQyNtgCAeACAQ&sid=02571dda123f3e1460a7d2ab706f7395&all_sr_blocks=1580077904_429104546_2_0_0&checkin=2026-08-01&checkout=2026-08-02&dest_id=20022354&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=1580077904_429104546_2_0_0&hpos=1&matching_block_id=1580077904_429104546_2_0_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=1580077904_429104546_2_0_0__10999&srepoch=1773120492&srpvid=ce392673baf101eb&type=total&ucfs=1&#RD1580077905s', 'Separate Seating', 'Mini Kitchen', 'Daily Housekeeping']
                 }
             ]
         },
-        'ROOMS': {
-            title: 'Rooms',
-            description: 'Elegant rooms designed for comfort and style, featuring luxurious amenities and thoughtful details.',
+        'STANDARD ROOMS': {
+            title: 'Standard Rooms',
+            description: 'Comfortable standard rooms with essential amenities for a pleasant stay in Fort Pierce.',
             rooms: [
                 {
                     id: 1,
-                    name: 'Superior Room',
-                    type: 'Room',
-                    size: '350 sq ft',
+                    name: 'Double Room',
+                    type: '2 double beds',
+                   
                     images: [
-                        'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&h=300&fit=crop',
-                        'https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=500&h=300&fit=crop',
-                        'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=500&h=300&fit=crop'
+                        'https://cf.bstatic.com/xdata/images/hotel/max300/822020379.jpg?k=ee0f85f331f229439b7adb988ee7f57c6708fa486e1180926be9889e11491516&o=',
+                       
                     ],
-                    features: ['King Bed', 'City View', 'Marble Bathroom', 'WiFi']
+                    features: ['Queen Bed', 'Free WiFi', 'Private Bathroom', 'Work Desk']
+                },
+                {
+                    id: 2,
+                    name: 'Double Room',
+                    type: '1 double bed',
+                   
+                    images: [
+                        'https://cf.bstatic.com/xdata/images/hotel/max300/822020375.jpg?k=d2f8486cd1de778ee86b312a6b4b418f5db4e8dc64924ae7fd448e00e0ef471b&o=',
+                     
+                    ],
+                    features: ['Two Double Beds', 'Air Conditioning', 'TV', 'Carpeted Floors']
+                }
+            ]
+        },
+        'DELUXE ROOMS': {
+            title: 'Deluxe Rooms',
+            description: 'Enhanced comfort with additional amenities including refrigerator and microwave for extended stays.',
+            rooms: [
+                {
+                    id: 1,
+                    name: 'Deluxe King Room',
+                    type: '1 extra-large double bed',
+                  
+                    images: [
+                        'https://cf.bstatic.com/xdata/images/hotel/max300/822020361.jpg?k=0f9c2801bc9402424bc0760b50ded8b0a70adddfbba3f2a052fa6115bb8607f6&o=',
+                        
+                    ],
+                    features: ['King Bed', 'Refrigerator', 'Microwave', 'Walk-in Shower']
                 },
                 {
                     id: 2,
                     name: 'Deluxe Room',
-                    type: 'Room',
-                    size: '400 sq ft',
+                    type: '2 diuble beds',
+                   
                     images: [
-                        'https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=500&h=300&fit=crop',
-                        'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&h=300&fit=crop',
-                        'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=500&h=300&fit=crop'
+                        'https://cf.bstatic.com/xdata/images/hotel/max300/822020375.jpg?k=d2f8486cd1de778ee86b312a6b4b418f5db4e8dc64924ae7fd448e00e0ef471b&o=',
+                       
                     ],
-                    features: ['King Bed', 'Garden View', 'Soaking Tub', 'Mini Bar']
+                    features: ['Queen Bed', 'Mini Fridge', 'Work Station', 'Free Parking']
                 }
             ]
         },
-        'SUITES': {
-            title: 'Suites',
-            description: 'Spacious suites with premium amenities, perfect for extended stays and special occasions.',
+        'FAMILY SUITES': {
+            title: 'Family Suites',
+            description: 'Spacious accommodations perfect for families, featuring separate areas and additional amenities.',
             rooms: [
                 {
                     id: 1,
-                    name: 'Greenwich Suite',
+                    name: 'Two King Family Suite',
                     type: 'Suite',
-                    size: '650 sq ft',
+                    
                     images: [
-                        'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=500&h=300&fit=crop',
-                        'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=500&h=300&fit=crop',
-                        'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&h=300&fit=crop'
+                        'https://cf.bstatic.com/xdata/images/hotel/max1024x768/822020385.jpg?k=9ae43e2a9c6e09587771556f03d80224ab0afb54e82f3fc17e939b5128c565b6&o=',
+                        
                     ],
-                    features: ['Separate Living Area', 'King Bed', 'Garden View', 'Kitchenette']
+                    features: ['Two Queen Beds', 'Separate Seating', 'Mini Kitchen', 'Daily Housekeeping']
                 },
                 {
                     id: 2,
-                    name: 'Executive Suite',
+                    name: 'Extended Stay Suite',
                     type: 'Suite',
-                    size: '800 sq ft',
+                   
                     images: [
-                        'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=500&h=300&fit=crop',
-                        'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=500&h=300&fit=crop',
-                        'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=500&h=300&fit=crop'
+                        'https://cf.bstatic.com/xdata/images/hotel/max1024x768/822020375.jpg?k=d2f8486cd1de778ee86b312a6b4b418f5db4e8dc64924ae7fd448e00e0ef471b&o=',
+                        
                     ],
-                    features: ['Two Rooms', 'Work Area', 'Premium Amenities', 'City View']
-                }
-            ]
-        },
-        'DUPLEXES & PENTHOUSE': {
-            title: 'Duplexes & Penthouse',
-            description: 'Ultimate luxury in our exclusive duplexes and penthouse, offering unparalleled space and privacy.',
-            rooms: [
-                {
-                    id: 1,
-                    name: 'Penthouse Suite',
-                    type: 'Penthouse',
-                    size: '1200 sq ft',
-                    images: [
-                        'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=500&h=300&fit=crop',
-                        'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&h=300&fit=crop',
-                        'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=500&h=300&fit=crop'
-                    ],
-                    features: ['Private Terrace', 'Two Bedrooms', 'Full Kitchen', 'City Views']
-                },
-                {
-                    id: 2,
-                    name: 'Duplex Suite',
-                    type: 'Duplex',
-                    size: '1000 sq ft',
-                    images: [
-                        'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&h=300&fit=crop',
-                        'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=500&h=300&fit=crop',
-                        'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&h=300&fit=crop'
-                    ],
-                    features: ['Two Levels', 'Living Room', 'Dining Area', 'Private Entrance']
+                    features: ['King Bed + Sofa Bed', 'Kitchenette', 'Dining Area', 'Extra Storage']
                 }
             ]
         },
         'ADA ACCESSIBLE': {
-            title: 'ADA Accessible',
-            description: 'Fully accessible accommodations meeting ADA standards, ensuring comfort for all guests.',
+            title: 'ADA Accessible Rooms',
+            description: 'Fully accessible accommodations designed to meet ADA standards for guests with mobility needs.',
             rooms: [
                 {
                     id: 1,
-                    name: 'Accessible Superior Room',
-                    type: 'Room',
-                    size: '375 sq ft',
+                    name: 'Double Room - Disability Access',
+                    type: '2 double beds',
+                   
                     images: [
                         'https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=500&h=300&fit=crop',
-                        'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&h=300&fit=crop',
-                        'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&h=300&fit=crop'
+                        
                     ],
-                    features: ['Roll-in Shower', 'Accessible Bathroom', 'Lowered Fixtures', 'Wide Doorways']
+                    features: ['Roll-in Shower', 'Grab Bars', 'Lowered Fixtures', 'Wide Doorways']
                 },
                 {
                     id: 2,
-                    name: 'Accessible Suite',
-                    type: 'Suite',
-                    size: '650 sq ft',
+                    name: 'King Room - Disability Access',
+                    type: '1 extra - large double bed',
+                   
                     images: [
                         'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&h=300&fit=crop',
-                        'https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=500&h=300&fit=crop',
-                        'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=500&h=300&fit=crop'
+                       
                     ],
-                    features: ['Accessible Kitchen', 'Roll-in Shower', 'Hearing Accessible', 'Mobility Features']
+                    features: ['Accessible Bathroom', 'Hearing Accessible', 'Mobility Features', 'Emergency Systems']
                 }
             ]
         }
@@ -258,8 +250,8 @@ export default function Accommodations() {
 
                     <div className="hero-content">
                         <div className="hero-text">
-                            <h1 className="hero-title">Accommodations</h1>
-                            <p className="hero-description">86 uniquely appointed guest rooms and suites, of which no two are alike.</p>
+                            <h1 className="hero-title">Crossroads Inn</h1>
+                            <p className="hero-description">Comfortable accommodations in Fort Pierce with modern amenities and convenient location.</p>
                         </div>
                     </div>
                 </div>
@@ -343,10 +335,9 @@ export default function Accommodations() {
                                     </div>
                                 ))}
                             </div>
-
-                            {/* Amenities Section - Left Text, Right Image */}
-                            
                         </div>
+
+                        {/* Amenities Section - Only show on ALL ACCOMMODATIONS tab */}
                         {activeTab === 'ALL ACCOMMODATIONS' && (
                             <div className="amenities-section">
                                 <div className="amenities-container">
@@ -366,7 +357,7 @@ export default function Accommodations() {
                                     {/* Right Side - Image */}
                                     <div className="amenities-image">
                                         <img
-                                            src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&h=500&fit=crop"
+                                            src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/822020379.jpg?k=ee0f85f331f229439b7adb988ee7f57c6708fa486e1180926be9889e11491516&o="
                                             alt="Luxury Room Amenities"
                                             className="amenity-img"
                                         />
@@ -375,12 +366,8 @@ export default function Accommodations() {
                             </div>
                         )}
                     </div>
-                        
                 </div>
-                    
             </section>
-            
         </>
-        
     )
 }

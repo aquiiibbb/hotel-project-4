@@ -48,7 +48,7 @@ export default function Neigh() {
                 <div className="card big">
                     <img src={img1} />
                     <div className="label green">
-                        <h3>Locanda Verde</h3>
+                        <h3>Crossroads Inn</h3>
                         <p>FOOD & DRINK</p>
                     </div>
                 </div>

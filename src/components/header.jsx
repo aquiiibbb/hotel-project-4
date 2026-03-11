@@ -2,6 +2,7 @@ import "./header.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import image1 from '../Assest/logo.png';
 
 export default function Header() {
 
@@ -27,7 +28,7 @@ export default function Header() {
 
           <Link to="/" className="gh-logo" onClick={closeMobileMenu}>
             <img
-              src="https://www.thegreenwichhotel.com/wp-content/themes/greenwich/assets/images/ui/logo-gh.svg"
+              src={image1}
               alt="Greenwich Hotel"
             />
           </Link>
